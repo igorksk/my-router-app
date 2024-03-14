@@ -1,7 +1,12 @@
 import React from 'react';
+import "../App.css"
 
 const About: React.FC = () => {
-  return <h2>About</h2>;
+  return (
+    <div className="container">
+      <h2 className="title">About</h2>
+    </div>
+  );
 };
 
 export default About;
