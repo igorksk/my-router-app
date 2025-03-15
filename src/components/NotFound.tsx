@@ -3,8 +3,11 @@ import "../App.css"
 
 const NotFound: React.FC = () => {
   return (
-    <div className="container">
-      <h2 className="title">404 - Not Found</h2>
+    <div className="page-container">
+      <h2 className="page-title">404 - Not Found</h2>
+      <p className="page-content">
+        Oops! The page you are looking for does not exist.
+      </p>
     </div>
   );
 };

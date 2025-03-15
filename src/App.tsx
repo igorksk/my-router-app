@@ -4,31 +4,34 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import './App.css'; // Import the updated CSS
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
+      <div className="app-container">
+        <nav className="nav-bar">
+          <ul className="nav-list">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">Home</Link>
             </li>
-            <li>
-              <Link to="/about">About</Link>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">About</Link>
             </li>
-            <li>
-              <Link to="/contact">Contact</Link>
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link">Contact</Link>
             </li>
           </ul>
         </nav>
 
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/contact" Component={Contact} />
-          <Route path="*"  Component={NotFound} />
-        </Routes>
+        <main className="content-area">
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/about" Component={About} />
+            <Route path="/contact" Component={Contact} />
+            <Route path="*" Component={NotFound} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
